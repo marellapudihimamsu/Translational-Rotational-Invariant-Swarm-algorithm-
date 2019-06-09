@@ -13,8 +13,6 @@ stepsize=0.1
 distance=100
 edgelist=[(0,1),(1,2),(2,0)]
 G=nx.Graph(edgelist)
-#G= nx.Graph()
-#G.add_weighted_edges_from([(0,1,1),(1,2,1),(2,3,1),(3,0,1),(1,3,2**0.5),(0,2,2**0.5)])
 for dummy in range(100): 
   for i in range(3):
     G.add_node(i, pos=(p[0][i],p[1][i]))
@@ -40,7 +38,7 @@ for dummy in range(100):
       err[1]=err[1]+(rely*(1-((distance)/reld)))                                     # sgima ((yi - yj)(1-distance / rel distance))
       #print(rel0/abs(rel0),end=" ")
     #print()
-    p[0][i]-=stepsize*err[0]                                                         # pi := pi - gama *(sigma ( dE/dPi ) ) 
+    p[0][i]-=stepsize*err[0]                                                         
     p[1][i]-=stepsize*err[1]
     #print(p)
 pyp.grid(color='r', linestyle='-', linewidth=0.5)
