@@ -1,3 +1,7 @@
+#///////////////////////////////
+#// Himamsu
+#// june 2019
+#//////////////////////////////
 import matplotlib.pyplot as pyp
 import random as rand
 import networkx as nx
